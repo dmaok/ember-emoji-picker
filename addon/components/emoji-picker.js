@@ -150,8 +150,8 @@ export default Component.extend({
     this.renderAllEmojisList();
 
     const
-      $scroller = this.$('.nano-content'),
-      $categories = this.$('.js-eep-select-section');
+      $scroller = $('.nano-content'),
+      $categories = $('.js-eep-select-section');
 
     this.setProperties({
       $scroller,
@@ -206,7 +206,7 @@ export default Component.extend({
       dom.appendChild(section);
     }
 
-    this.$('.js-emoji-sections-wrap').get(0).appendChild(dom);
+    $('.js-emoji-sections-wrap').get(0).appendChild(dom);
   },
 
   _checkScroll() {
@@ -250,7 +250,7 @@ export default Component.extend({
 
   actions: {
     selectEmoji(emoji) {
-      this.sendAction('onSelectEmoji', emoji);
+      this.onSelectEmoji(emoji);
 
       this._updateRecent(emoji);
     },
